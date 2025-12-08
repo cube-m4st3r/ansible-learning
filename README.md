@@ -1,3 +1,11 @@
+# ansible-learning
+
+This is a learning and experimenting repository, forked from the project that is described below and also linked in the GitHub interface.
+
+> [!NOTE]
+> It is planned to advance this project and save ansible configurations in here, as well as small "projects".
+
+
 ## Dive Into Ansible Course Lab
 
 [![Follow](https://shields.io/twitter/follow/jamesspurin?label=Follow)](https://twitter.com/jamesspurin)
