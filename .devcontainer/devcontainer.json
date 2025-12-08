@@ -1,0 +1,25 @@
+{
+	"name": "Ansible-Learning",
+	"image": "mcr.microsoft.com/devcontainers/base:debian",
+	"features": {
+		"ghcr.io/devcontainers-extra/features/ansible:2": {
+			"version": "latest"
+		}
+	},
+	"mounts": [
+    	"source=${localEnv:SSH_AUTH_SOCK},target=/ssh-agent,type=bind,consistency=cached"
+	],
+	"containerEnv": {
+		"SSH_AUTH_SOCK": "/ssh-agent"
+	},
+
+	// this is added for rootless containers to map the container user to the host uid/gid
+	// example assumes the default vscode user with uid/gid 1000 (used in production)
+	// adjust as needed for your devcontainer user configuration (I use podman with rootless containers)
+	 "runArgs": [
+		"--userns=keep-id:uid=1000,gid=1000"
+	],
+	"containerUser": "vscode",
+	"updateRemoteUserUID": true,
+	"postCreateCommand": "git config --local include.path ../.gitconfig"
+}
