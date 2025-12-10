@@ -5,6 +5,8 @@ This is a learning and experimenting repository, forked from the project that is
 > [!NOTE]
 > It is planned to advance this project and save ansible configurations in here, as well as small "projects".
 
+> [!WARNING]
+> The container runtime has to be in rootless mode, otherwise the current configuration isn't working. Tested on: Podman
 
 ## Dive Into Ansible Course Lab
 
